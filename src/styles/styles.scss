@@ -20,10 +20,21 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 
+
 .header {
+  display: flex;
   padding: 60px;
-  text-align: center;
+  position: relative;
   background: #111;
+}
+
+#Buttons-filters{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 img { /* stylelint-disable-line */
