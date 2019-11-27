@@ -28,6 +28,42 @@ html { /* stylelint-disable-line */
   align-content: center;
 }
 
+.main {
+  max-width: 1200px;
+}
+
+.alignboxes {
+  display: flex;
+}
+
+.alignboxLeft {
+  display: flex;
+  flex-grow: 2;
+}
+
+.alignboxRight {
+  display: flex;
+  flex-grow: 2;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1200px;
+}
+
+.card {
+  display: flex;
+  width: 33%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+}
+
+
 #Buttons-filters{
   display: flex;
   flex-direction: row;
