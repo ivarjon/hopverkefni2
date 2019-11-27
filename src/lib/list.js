@@ -7,5 +7,8 @@ export default class List {
 
   load() {
     empty(this.container);
+    const lectures = fetch('../lectures.json')
+
+    lectures.map(createLecture)
   }
 }
