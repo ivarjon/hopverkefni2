@@ -6,9 +6,18 @@ export default class List {
   }
 
   load() {
+    console.log('load');
     empty(this.container);
-    const lectures = fetch('../lectures.json')
-
-    lectures.map(createLecture)
+    return fetch('lectures.json')
+    .then((result) => {
+      console.log(result);
+      if (!result.ok) {
+        throw new Error('Non 200 status');
+      }
+      return result.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+    //lectures.map(createLecture)
   }
 }
