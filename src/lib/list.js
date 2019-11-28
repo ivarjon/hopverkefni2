@@ -22,7 +22,7 @@ export default class List {
       //createLectureListItem(data.lectures[0].title);
       var i;
       for (i = 0; i < data.lectures.length; i++) {
-        createLectures(data.lectures[i].title);
+        createLectures(data.lectures[i].title, data.lectures[i].thumbnail);
       }
     })
     .catch(error => console.error(error));

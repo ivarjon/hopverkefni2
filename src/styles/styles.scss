@@ -48,13 +48,14 @@ html { /* stylelint-disable-line */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 1200px;
 }
 
 .card {
   display: flex;
-  width: 33%;
+  flex-direction: column;
+  width: 32%;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
@@ -62,12 +63,11 @@ html { /* stylelint-disable-line */
   border-radius: 5px;
 }
 
-
-#Buttons-filters{
+#Buttons-filters {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  position: relative;
 }
 
 img { /* stylelint-disable-line */

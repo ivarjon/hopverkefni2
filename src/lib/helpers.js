@@ -4,13 +4,21 @@ export function empty(element) {
   }
 }
 
-export function createLectures(title){
+export function createLectures(title, img){
   var newBox = document.createElement('div');
-  newBox.className = 'card';
-  document.querySelector('.cards').appendChild(newBox);
+  var imageField = document.createElement('div');
+  var textField = document.createElement('div');
   var content = document.createTextNode(title);
-  newBox.appendChild(content);
+  var thumbnail = document.createElement('img');
+  newBox.className = 'card';
+  imageField.className = 'imageField';
+  textField.className = 'textField';
+  thumbnail.src = img;
+  //var src = 
 
+  document.querySelector('.cards').appendChild(newBox);
+  newBox.appendChild(imageField).appendChild(thumbnail);
+  newBox.appendChild(textField).appendChild(content);
   // búa til div
 
   // búa til myndina
