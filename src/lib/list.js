@@ -22,9 +22,7 @@ export default class List {
       //createLectureListItem(data.lectures[0].title);
       var i;
       for (i = 0; i < data.lectures.length; i++) {
-        var newBox = document.createElement('div');
-        newBox.className = 'card';
-        createLectures(newBox, data.lectures[i].title);
+        createLectures(data.lectures[i].title);
       }
     })
     .catch(error => console.error(error));

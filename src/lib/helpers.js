@@ -4,10 +4,12 @@ export function empty(element) {
   }
 }
 
-export function createLectures(element, title){
-  document.querySelector('.cards').appendChild(element);
+export function createLectures(title){
+  var newBox = document.createElement('div');
+  newBox.className = 'card';
+  document.querySelector('.cards').appendChild(newBox);
   var content = document.createTextNode(title);
-  element.appendChild(content);
+  newBox.appendChild(content);
 
   // búa til div
 
