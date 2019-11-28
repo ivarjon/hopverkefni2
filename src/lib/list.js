@@ -7,7 +7,7 @@ export default class List {
 
   load() {
     console.log('load');
-    empty(this.container);
+    //empty(this.container);
     return fetch('lectures.json')
     .then((result) => {
       console.log(result);
