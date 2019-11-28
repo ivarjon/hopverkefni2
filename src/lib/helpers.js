@@ -5,5 +5,5 @@ export function empty(element) {
 }
 
 export function createLectures(element){
-  
+  document.getElementsByClassName('cards').appendChild(element);
 }

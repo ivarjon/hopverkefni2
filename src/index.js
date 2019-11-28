@@ -3,7 +3,11 @@ import List from './lib/list';
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
-  console.log('load');
+
+  var newBox = document.createElement('div');
+  newBox.className = 'card';
+  helpers.createLectures(newBox);
+  
   if (isLecturePage) {
     
   } else {
