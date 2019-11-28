@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var newBox = document.createElement('div');
   newBox.className = 'card';
 
-  createLectures(newBox);
+  //createLectures(newBox);
 
   if (isLecturePage) {
     

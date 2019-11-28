@@ -19,9 +19,9 @@ html { /* stylelint-disable-line */
 }
 
 .header {
+  position: relative;
   display: flex;
   padding: 120px;
-  position: relative;
   background: gray;
   justify-content: center;
   align-content: center;

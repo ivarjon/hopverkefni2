@@ -1,4 +1,4 @@
-import { empty } from './helpers';
+import { createLectures } from './helpers';
 
 export default class List {
   constructor() {
@@ -19,7 +19,13 @@ export default class List {
     .then(data => {
       console.log(data);
       //iterate here
-      createLectureListItem(data.lectures[0].title);
+      //createLectureListItem(data.lectures[0].title);
+      var i;
+      for (i = 0; i < data.lectures.length; i++) {
+        var newBox = document.createElement('div');
+        newBox.className = 'card';
+        createLectures(newBox, data.lectures[i].title);
+      }
     })
     .catch(error => console.error(error));
     //lectures.map(createLecture)

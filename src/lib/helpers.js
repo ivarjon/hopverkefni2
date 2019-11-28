@@ -4,14 +4,11 @@ export function empty(element) {
   }
 }
 
-export function createLectures(element){
+export function createLectures(element, title){
   document.querySelector('.cards').appendChild(element);
-  var content = document.createTextNode("<YOUR_CONTENT>");
+  var content = document.createTextNode(title);
   element.appendChild(content);
-}
 
-// fall sem býr til eitt lecture list item
-export function createLectureListItem(title){
   // búa til div
 
   // búa til myndina
