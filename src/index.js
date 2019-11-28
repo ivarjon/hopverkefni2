@@ -1,4 +1,5 @@
 import List from './lib/list';
+import { createLectures } from './lib/helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -6,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var newBox = document.createElement('div');
   newBox.className = 'card';
-  helpers.createLectures(newBox);
-  
+
+  createLectures(newBox);
+
   if (isLecturePage) {
     
   } else {

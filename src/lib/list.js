@@ -16,8 +16,14 @@ export default class List {
       }
       return result.json();
     })
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      //iterate here
+      createLectureListItem(data.lectures[0].title);
+    })
     .catch(error => console.error(error));
     //lectures.map(createLecture)
   }
+
+  
 }
