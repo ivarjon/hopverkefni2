@@ -55,9 +55,9 @@ html { /* stylelint-disable-line */
 .card {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: space-between;
   width: 32%;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   background-color: #fff;
 }
 
