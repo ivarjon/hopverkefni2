@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
 
+
   var newBox = document.createElement('div');
   newBox.className = 'card';
   document.querySelector(".header").style.backgroundColor = "gray";
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var catParam = params[0];
     var titleParam = params[1];
     const list = new List();
-    list.loadLecture(catParam,titleParam, param);
+    list.loadLecture(catParam, titleParam, param);
 
   } else {
     const list = new List();
