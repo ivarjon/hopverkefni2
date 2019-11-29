@@ -1,11 +1,23 @@
 module.exports = {
-  extends: 'airbnb-base',
-  env: {
-    browser: true
-  },
-  rules: {
-    'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
-    'class-methods-use-this': 0,
-  },
-  plugins: ['import'],
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+    }
 };

@@ -57,6 +57,8 @@ export function createLecture(data, n){
 function createYoutube(url){
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", url);
+  ifrm.setAttribute("frameborder", 0);
+  ifrm.setAttribute("allowfullscreen", 0);
   ifrm.style.width = "800px";
   ifrm.style.height = "600px";
   document.querySelector('.alignboxCenter').appendChild(ifrm);
@@ -68,6 +70,7 @@ function createText(txt){
   for (var i=0; i<txt.length; i++){
     var par = document.createElement("p");
     var node = document.createTextNode(txt[i]);
+    par.className = 'textPar';
     par.appendChild(node);
     document.querySelector('.alignboxCenter').appendChild(par);
   }
@@ -130,13 +133,3 @@ function createCode(code){
     document.querySelector('.alignboxCenter').appendChild(par);
   }
 }
-
-/*
-youtube
-text
-quote
-image
-heading
-list
-code
-*/
