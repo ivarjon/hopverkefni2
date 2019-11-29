@@ -48,6 +48,7 @@ html { /* stylelint-disable-line */
 
 .alignboxCenter {
   display: flex;
+  max-width: 800px;
   flex-direction: column;
   flex-grow: 2;
 }
