@@ -18,14 +18,14 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 
-.header {
-  position: relative;
+.header{
   display: flex;
+  position: static;
+  flex-direction: column;
+  text-align: center;
+  background-image: inherit;
+  font-family: 'Roboto' , monospace;
   padding: 120px;
-  background: gray;
-  justify-content: center;
-  align-content: center;
-  font-family: 'Lora', serif;
 }
 
 .main {
