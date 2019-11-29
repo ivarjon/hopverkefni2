@@ -1,3 +1,5 @@
+//#000, #999, #aaa, #ccc, #2d2, #1a1, #fcffd2 og #cc9694
+
 @import "config";
 
 * {
@@ -18,17 +20,17 @@ html { /* stylelint-disable-line */
   font-size: 16px;
 }
 
-.header{
-  display: flex;
+.header {
   position: static;
-  flex-direction: column;
-  text-align: center;
-  background-size: cover;
-  padding-bottom: 60%;
-  font-family: 'Roboto', monospace;
-  padding: 120px;
+  display: flex;
   max-width: 100%;
+  padding: 120px;
+  font-family: 'Roboto', monospace;
   font-size: 24px;
+  text-align: center;
+  flex-direction: column;
+  background-image: inherit;
+  background-size: cover;
 }
 
 .header > p {
@@ -77,6 +79,32 @@ html { /* stylelint-disable-line */
   background-color: gray;
 }
 
+h1,iframe {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-family: 'Roboto', monospace;
+}
+
+ul {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+.textPar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.quotation {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #aaa;
+}
+
 #Buttons-filters {
   position: relative;
   display: flex;
@@ -86,6 +114,7 @@ html { /* stylelint-disable-line */
 
 img { /* stylelint-disable-line */
   max-width: 100%;
+  padding-top: 40px;
 }
 
 // TODO import
