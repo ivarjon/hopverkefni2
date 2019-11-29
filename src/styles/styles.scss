@@ -45,6 +45,12 @@ html { /* stylelint-disable-line */
   flex-grow: 2;
 }
 
+.alignboxCenter {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -57,8 +63,8 @@ html { /* stylelint-disable-line */
   flex-direction: column;
   justify-content: space-between;
   width: 32%;
-  margin-bottom: 20px;
-  background-color: #fff;
+  margin-bottom: 10px;
+  background-color: gray;
 }
 
 #Buttons-filters {

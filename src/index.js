@@ -8,12 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
   var newBox = document.createElement('div');
   newBox.className = 'card';
 
-  //createLectures(newBox);
-
   if (isLecturePage) {
-    
+    var url = window.location.search;
+    var param = url.substring(6, url.length);
+    var params = param.split("-");
+    var catParam = params[0];
+    var titleParam = params[1];
+    const list = new List();
+    list.loadLecture(catParam,titleParam, param);
+
   } else {
     const list = new List();
     list.load();
   }
+});
+
+// shows and hides filtered items
+$(".btn").click(function() {
+  var value = $(this).attr('data-filter');
+  if(value === "css") {
+    $('.card').show('1000');
+  } else {
+    $(".card").not('.'+value).hide('3000');
+    $('.card').filter('.'+value).show('3000');
+  }
+});
+
+// changes active class on filter buttons
+$('.btn').click(function () {
+  $(this).siblings().removeClass('is-active');
+  $(this).addClass('is-active');
 });
