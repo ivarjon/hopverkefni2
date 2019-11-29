@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var newBox = document.createElement('div');
   newBox.className = 'card';
-
+  document.querySelector(".header").style.backgroundColor = "gray";
   if (isLecturePage) {
     var url = window.location.search;
     var param = url.substring(6, url.length);
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// shows and hides filtered items
+//filter
 $(".btn").click(function() {
   var value = $(this).attr('data-filter');
   if(value === "css") {
@@ -33,8 +33,6 @@ $(".btn").click(function() {
     $('.card').filter('.'+value).show('3000');
   }
 });
-
-// changes active class on filter buttons
 $('.btn').click(function () {
   $(this).siblings().removeClass('is-active');
   $(this).addClass('is-active');

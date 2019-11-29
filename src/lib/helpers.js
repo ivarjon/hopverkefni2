@@ -32,7 +32,7 @@ export function createLecture(data, n){
   var content = lecture.content;
   document.getElementById("htitle").textContent = lecture.title;
   document.getElementById("hcat").textContent = lecture.category;
-  //document.header.style.backgroundImage = 'url('+lecture.image+')'; //virkar ekki ???
+  document.querySelector(".header").style.backgroundImage = 'url('+lecture.image+')';
 
   var i;
   for (i = 0; i < content.length; i++) {
@@ -55,31 +55,31 @@ export function createLecture(data, n){
 }
 
 function createYoutube(){
-  alert('youtube');
+  
 }
 
 function createText(){
-  alert('text');
+  
 }
 
 function createQuote(){
-  alert('quote');
+  
 }
 
 function createImage(){
-  alert('image');
+  
 }
 
 function createHeading(){
-  alert('heading');
+  
 }
 
 function createList(){
-  alert('list');
+  
 }
 
 function createCode(){
-  alert('code');
+  
 }
 
 /*
