@@ -22,7 +22,10 @@ export function createLectures(element){
   link.href = 'fyrirlestur.html?slug=' + element.slug;
 
   document.querySelector('.cards').appendChild(newBox);
-  newBox.appendChild(imageField).appendChild(thumbnail);
+  newBox.appendChild(imageField);
+  if(element.thumbnail != null){
+    newBox.appendChild(imageField).appendChild(thumbnail);
+  }
   newBox.appendChild(tagField).appendChild(tag);
   newBox.appendChild(textField).appendChild(link);
 }
@@ -65,15 +68,20 @@ function createYoutube(url){
 }
 
 function createText(txt){
+  var parField = document.createElement('div');
+  parField.className = 'parField';
   txt = txt.split("\n");
 
   for (var i=0; i<txt.length; i++){
-    var par = document.createElement("p");
-    var node = document.createTextNode(txt[i]);
-    par.className = 'textPar';
-    par.appendChild(node);
-    document.querySelector('.alignboxCenter').appendChild(par);
+    if(txt[i] != '') {
+      var par = document.createElement("p");
+      var node = document.createTextNode(txt[i]);
+      par.className = 'textPar';
+      par.appendChild(node);
+      parField.appendChild(par);
+    }
   }
+  document.querySelector('.alignboxCenter').appendChild(parField);
 }
 
 function createQuote(quote, attribute){
@@ -94,14 +102,19 @@ function createQuote(quote, attribute){
 }
 
 function createImage(url, caption){
+  var imgField = document.createElement('div');
+  imgField.className = 'imgField';
+
   var img = document.createElement('img');
   img.src = url;
-  document.querySelector('.alignboxCenter').appendChild(img);
-
+  imgField.appendChild(img);
+  
   var cap = document.createElement("p");
   var node = document.createTextNode(caption);
   cap.appendChild(node);
-  document.querySelector('.alignboxCenter').appendChild(cap);
+  imgField.appendChild(cap);
+
+  document.querySelector('.alignboxCenter').appendChild(imgField);
 }
 
 function createHeading(heading){
@@ -124,12 +137,18 @@ function createList(list){
 }
 
 function createCode(code){
+  var parField = document.createElement('div');
+  parField.className = 'codeField';
   code = code.split("\n");
 
   for (var i=0; i<code.length; i++){
-    var par = document.createElement("p");
-    var node = document.createTextNode(code[i]);
-    par.appendChild(node);
-    document.querySelector('.alignboxCenter').appendChild(par);
+    if(code[i] != '') {
+      var par = document.createElement("p");
+      var node = document.createTextNode(code[i]);
+      par.className = 'codePar';
+      par.appendChild(node);
+      parField.appendChild(par);
+    }
   }
+  document.querySelector('.alignboxCenter').appendChild(parField);
 }

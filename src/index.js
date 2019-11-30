@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var newBox = document.createElement('div');
   newBox.className = 'card';
-  document.querySelector(".header").style.backgroundColor = "gray";
+  document.querySelector(".header").style.backgroundColor = "#999";
   if (isLecturePage) {
     var url = window.location.search;
     var param = url.substring(6, url.length);
